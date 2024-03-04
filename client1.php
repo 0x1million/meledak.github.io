@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link itemprop="mainEntityOfPage" rel="canonical" href="https://0x1million.github.io/meledak.github.io/client1.php">
+    <link itemprop="mainEntityOfPage" rel="canonical" href="https://0x1million.github.io/meledak.github.io/client1.html">
     <link rel="amphtml" href="https://kopihongkong.com/bos1/" >
     <title>BOSANGKA - Server Thailand 2024 Paling Gachor</title>
     <meta name="description" content="BOSANGKA - Server Thailand 2024 Paling Gachor di Alam Semesta Indonesia Bumi Pertiwi">
