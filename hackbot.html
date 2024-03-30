@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOPRAGMA V.8.560 TERBARU</title>
+    <style>
+  body{margin:0;overflow:hidden;font-family:"Courier New",Courier,monospace}canvas{display:block;position:absolute;top:0;left:0;pointer-events:none}#matrixCanvas{z-index:-1}.form-container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:60px;background:rgba(0,0,0,0.6);border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.5);text-align:center;color:#00ec00}.form-container img{width:100%;max-width:500px;border-radius:10px}.input-field,.select-field{width:100%;padding:10px;margin-bottom:10px;box-sizing:border-box;border-radius:20px}.submit-btn{padding:15px 20px;background-color:#00ec00;color:#000;border:none;border-radius:5px;cursor:pointer;margin-top:1rem}.progress-container{display:none;margin-top:20px}.progress-bar{width:100%;padding:10px;background-color:#00ec00;color:#000;border:none;border-radius:5px;cursor:not-allowed;position:relative;overflow:hidden}.progress-bar::before{content:"";position:absolute;top:0;left:0;bottom:0;width:100%;background:repeating-linear-gradient(45deg,#00ec00,#00ec00 10px,transparent 10px,transparent 20px);background-size:28px 28px;animation:progressAnimation 2s linear infinite}.progress-text{color:#00ec00;font-size:18px;margin-bottom:10px}.progress-info{color:#00ec00;font-size:14px}@keyframes progressAnimation{0%{background-position:0 0}100%{background-position:28px 0}}@media (max-width:767px){.form-container{transform:none;top:0;left:0;background:none;box-shadow:none;display:flex;margin:0 auto;flex-direction:column;justify-content:center;align-items:center}}
+    </style>
+  </head>
+  <body>
+    <canvas id="matrixCanvas" width="1900" height="900"></canvas>
+
+    <div class="form-container">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMNECPQTY0etbTM9C09QlgCGLfBNZzt0FYFcK2e3_7REQ7J0tPFtJArWsSot7I4kHMHL0_YIjoFN1G893UV4IhEz9MLmevLwp_-GASj503QqLSC4q0THLkjn_xTeqPBx1AGnRTuR3kOTXhKb3mGuEla=w911-h911-s-no-gm?authuser=0" alt="JAAW Image">
+      <h2>INJECT HACKBOT V.6.5 TERBARU 2024</h2>
+      <form id="submitForm" action="#" method="POST">
+        <label for="username">MASUKAN USERNAME :</label>
+        <input type="text" id="username" name="username" class="input-field" required="">
+        <br>
+        <label for="selectOption">PILIH PROGRAM:</label>
+        <select id="selectOption" name="selectOption" class="select-field" required="">
+          <option value="scatter_hack">AUTO SCATTER</option>
+          <option value="freespin_hack">AUTO FREESPIN</option>
+          <option value="auto_jackpot">AUTO JACKPOT</option>
+          <option value="auto_maxwin">AUTO MAXWIN</option>
+          <option value="auto_x500_x1000">AUTO X500 - X1000</option>
+        </select>
+        <br>
+        <label for="selectOption">PILIH SERVER:</label>
+        <select id="pilihan" name="selectOption" class="select-field" required="">
+          <option value="1">SERVER THAILAND</option>
+          <option value="2">SERVER KAMBOJA</option>
+          <option value="3">SERVER VIETNAM</option>
+          <option value="4">SERVER HONGKONG</option>
+          <option value="5">SERVER FILIPINA</option>
+          <option value="6">SERVER KOEREA</option>
+          <option value="9">SERVER JEPANG</option>
+        </select>
+        <br>
+        <button type="submit" id="submitButton" class="submit-btn">
+          AKTIFKAN BOT
+        </button>
+      </form>
+
+      <div id="progressContainer" class="progress-container">
+        <div class="progress-text" id="progressText">Inject Start...</div>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-info" id="progressInfo">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const canvas = document.getElementById("matrixCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const matrixChars = "Injectorvbot";
+      const charsArray = matrixChars.split("");
+
+      const fontSize = 16;
+      const columns = canvas.width / fontSize;
+
+      const drops = [];
+      for (let i = 0; i < columns; i++) {
+        drops[i] = 1;
+      }
+
+      function drawMatrix() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#00ec00";
+        ctx.font = `${fontSize}px roboto`;
+
+        for (let i = 0; i < drops.length; i++) {
+          const text =
+            charsArray[Math.floor(Math.random() * charsArray.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+
+          drops[i]++;
+        }
+      }
+
+      function updateMatrix() {
+        drawMatrix();
+        requestAnimationFrame(updateMatrix);
+      }
+
+      updateMatrix();
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        updateMatrix();
+      });
+
+      const submitForm = document.getElementById("submitForm");
+      const progressBar = document.getElementById("progressBar");
+      const progressContainer = document.getElementById("progressContainer");
+      const progressText = document.getElementById("progressText");
+      const progressInfo = document.getElementById("progressInfo");
+
+      submitForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Simulasi proses pengiriman formulir
+        submitForm.style.display = "none";
+        progressContainer.style.display = "block";
+
+        let progress = 0;
+        const username = document.getElementById("username").value;
+
+        function simulateProgress() {
+          if (progress < 50) {
+            progress += 0.5;
+            progressBar.style.width = `${progress}%`;
+            progressInfo.textContent = `${progress}%`;
+
+            // Update teks progress secara acak
+            let progressTextContent = "";
+            if (progress < 10) {
+              progressTextContent = "Finding Server...";
+            } else if (progress < 20) {
+              progressTextContent = "Redirecting Server...";
+            } else if (progress < 30) {
+              progressTextContent = "Block Firewall...";
+            } else if (progress < 40) {
+              progressTextContent = "Injecting bot...";
+            } else if (progress < 45) {
+              progressTextContent = "Locking bot...";
+            } else if (progress < 80) {
+              progressTextContent = "Injecting Success, register with username";
+            } else {
+              progressTextContent = "Finish...";
+            }
+            progressText.textContent = progressTextContent;
+
+            setTimeout(simulateProgress, 50);
+          } else {
+            // Jika progres selesai, tampilkan teks selesai dan lakukan loading sebelum redirect
+            progressText.textContent = "Success Injection Username";
+            simulateLoading();
+          }
+        }
+
+        function simulateLoading() {
+          progressText.textContent =
+            "INJECT SUCCESS, HAVE FUN AND WIN!...";
+          let loadingProgress = 0;
+
+          function updateLoading() {
+            if (loadingProgress < 50) {
+              loadingProgress += 1;
+              progressBar.style.width = `${loadingProgress}%`;
+              progressInfo.textContent = `${loadingProgress}%`;
+              setTimeout(updateLoading, 50);
+            } else {
+              // Setelah loading selesai, redirect ke halaman tujuan
+              window.location.href = "https://bosvip.link/daftar";
+            }
+          }
+
+          updateLoading();
+        }
+
+        simulateProgress();
+      });
+    </script>
+    <script>
+      function validateForm() {
+          var username = document.getElementById("username").value;
+          if (username.trim() === "") {
+              alert("Masukkan username.");
+              return false;
+          }
+          return true;
+      }
+  </script>
+  
+
+</body>
+</html>
