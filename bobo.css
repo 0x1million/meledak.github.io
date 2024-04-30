@@ -1,0 +1,139 @@
+.fixedSidebar {
+  position: fixed;
+  z-index: 99;
+  background-color: #d70018;
+}
+
+.fixedSidebar.active .sidebarItem {
+  transform: scale(0);
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.fixedSidebar [data-tooltip] {
+  position: relative;
+  z-index: 9;
+}
+
+.fixedSidebar [data-tooltip]::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  display: block;
+  padding: 7px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8em;
+  white-space: nowrap;
+  border-radius: 4px;
+  background: #d70018;
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.fixedSidebar [data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fixedSidebar .sidebarItem {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  margin: 10px 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  transition: .25s;
+}
+
+.fixedSidebar .sidebarItem img {
+  fill: #fff;
+}
+
+.fixedSidebar.fixedSidebarLeft {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.fixedSidebar.fixedSidebarLeft:before,
+.fixedSidebar.fixedSidebarLeft:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  height: 30px;
+  width: 60px;
+  left: 0px;
+}
+
+.fixedSidebar.fixedSidebarLeft:before {
+  top: 0;
+  border-radius: 0 0 50px 0;
+  box-shadow: 30px 1px 0 0 #d70018;
+  transform: rotate(90deg) translateY(50%) translateX(-75%);
+}
+
+.fixedSidebar.fixedSidebarLeft:after {
+  bottom: 0;
+  border-radius: 0 50px 0px 0;
+  box-shadow: 30px -1px 0 0 #d70018;
+  transform: rotate(-0.25turn) translateX(-75%) translateY(-50%);
+}
+
+.fixedSidebar.fixedSidebarLeft .buttonTrigger svg {
+  transform: rotate(0deg);
+  transition: .25s;
+}
+
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active {
+  transform: scale(1)!important;
+  width: 24px!important;
+  height: 24px!important;
+}
+
+.fixedSidebar.fixedSidebarLeft .buttonTrigger.active svg {
+  transform: rotate(180deg);
+}
+
+.fixedSidebar [data-tooltip]::before {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.fixedSidebar [data-tooltip]:hover::before {
+  left: 50px;
+}
+
+.fixedSidebar .sidebarItem img {
+  max-width: 100%; 
+  max-height: 100%; 
+  display: block; 
+}
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .fixedSidebar.fixedSidebarLeft {
+    flex-direction: row; /* Change to row layout for small screens */
+  }
+  .fixedSidebar.fixedSidebarLeft .sidebarItem {
+    margin: 5px; /* Reduce margin for small screens */
+  }
+}
+
+/* Media query for extra small screens */
+@media screen and (max-width: 576px) {
+  .fixedSidebar.fixedSidebarLeft {
+    padding: 10px; /* Increase padding for extra small screens */
+  }
+}
